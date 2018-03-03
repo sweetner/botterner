@@ -17,7 +17,7 @@ class KillChatCommand extends commando.Command
                             key: 'user',
                             prompt: 'Who would you like to kill?',
                             type: 'user',
-                            default: ''
+                            default: false
                         }
                     ]
                 });
