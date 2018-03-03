@@ -42,7 +42,7 @@ class NickNameCommand extends commando.Command
 
         async run(message, { user, text })
         {
-            if (!(message.guild.member(message.author).hasPermission("MANAGE_NICKNAMES") || this.client.isOwner(msg.author)))
+            if (!(message.guild.member(message.author).hasPermission("MANAGE_NICKNAMES") || this.client.isOwner(message.author)))
                 return;
             message.guild.member(user).setNickname(text);
             return;
