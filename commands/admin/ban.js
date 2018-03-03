@@ -37,7 +37,7 @@ class BanCommand extends commando.Command
 
         async run(message, {user, text} )
         {
-            if (!(message.guild.member(message.author).hasPermission("BAN_MEMBERS") || this.client.isOwner(msg.author)))
+            if (!(message.guild.member(message.author).hasPermission("BAN_MEMBERS") || this.client.isOwner(message.author)))
                 return;
             message.guild.member(user).ban();
             console.log(`${message.author} banned ${user}`);
