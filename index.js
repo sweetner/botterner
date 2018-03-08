@@ -14,7 +14,8 @@ client.registry
         ['random', 'Random'],
         ['chat', 'Chat'],
         ['user', 'User'],
-        ['admin', 'Admin']
+        ['admin', 'Admin'],
+        ['owner', 'Owner']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
