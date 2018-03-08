@@ -13,18 +13,11 @@ class KillChatCommand extends commando.Command
                     memberName: 'kill',
                     description: 'Kills the chat, or a user.',
                     examples: ['s!kill', 's!kill `@mention`'],
-                    args: [
-                        {
-                            key: 'user',
-                            prompt: 'Who would you like to kill?',
-                            type: 'user',
-                            default: false
-                        }
-                    ]
                 });
         }
-        async run(message, { user })
+        async run(message)
         {
+            let user = message.mentions.users.first();
             if(user)
                 return message.say(user + " :point_left: :gun:");
             return message.say(`CHAT :point_left: :gun:`);

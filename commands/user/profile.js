@@ -14,21 +14,13 @@ class ProfileCommand extends commando.Command
                     memberName: 'profile',
                     description: 'Shows a profile of a user',
                     examples: ['s!profile `@mention`'],
-                    args: [
-                        {
-                            key: 'user',
-                            prompt: 'What user would you like to change the name of?',
-                            type: 'user',
-                            default: false
-                        }]
                 });
         }
 
 
-        async run(message, {user} )
+        async run(message)
         {
-            if (!user)
-                user = message.author;
+            let user = message.mentions.users.first() ? message.mentions.users.first() : message.author;
             let nickname = message.guild.member(user).nickname ? message.guild.member(user).nickname : "No nickname";
             let role = message.guild.member(user).highestRole ? message.guild.member(user).highestRole : "No role";
             let lastmsg = message.guild.member(user).lastMessage ? message.guild.member(user).lastMessage : `${user.tag} sent no messages lately`;

@@ -1,5 +1,8 @@
 **V1.1**
-
-+Added changelog
++Added changelog and changelog command
 +Added invite link command
 +Changed the bot status to "s!help ; <amount of server> servers"
++Fixed the bug in the "Chat" command group where it asks for a user non-stop. (Was too spammy/ not working as intended)
++Added a special interaction when a user s!love him/herself
++Changed the avatar command to look better
++Only "Admin" group command will ask for a valid input of user/text

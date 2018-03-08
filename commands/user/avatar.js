@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+const Discord = require('discord.js');
 
 class AvatarCommand extends commando.Command
     {   
@@ -11,21 +12,19 @@ class AvatarCommand extends commando.Command
                     memberName: 'avatar',
                     description: 'Posts the avatar picture of a user.',
                     examples: ['s!avatar', 's!avatar `@mention`'],
-                    args: [
-                        {
-                            key: 'user',
-                            prompt: 'Who \'s avatar picture would you like to see?',
-                            type: 'user',
-                            default: false
-                        }
-                    ]
                 });
         }
-        async run(message, { user })
+        async run(message)
         {
-            if(user)
-                return message.say(`There you go! \n${user.avatarURL}`);
-            return message.say(`There you go! \n${message.author.displayAvatarURL}`);
+            let user = message.mentions.users.first() ? message.mentions.users.first() : message.author ;
+            let image = user.avatarURL;
+            let color = message.guild.member(user).displayHexColor == '#000000' ? '#5a63b6' : message.guild.member(user).displayHexColor ;
+            var embed = new Discord.RichEmbed()
+                .setTitle(`Avatar of ${user.tag}`)
+                .setImage(image)
+                .setColor(color)
+            message.channel.send(embed);
+            
         }
     }   
 

@@ -23,12 +23,12 @@ class RoleColorCommand extends commando.Command
                         },
                         {
                             key: 'color',
-                            prompt: 'Whats your desired color? **IN HEX**',
+                            prompt: 'Whats your desired color? \n**IN HEX**\n',
                             type: 'string',
                             validate: color => {
                                 if (color.length == 7 && color.startsWith("#"))
                                     return true;
-                                return 'The role color you entered is invalid.\nPlease make sure its a hex code color.\nPlease type again your desired color.\n';
+                                return 'The role color you entered is invalid.\nPlease make sure its a hex code color.\n \nPlease type again your desired color.\n';
                             }
                         }
                     ]

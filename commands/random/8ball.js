@@ -16,16 +16,15 @@ class EightBallCommand extends commando.Command
                             key: 'text',
                             prompt: 'What question would you like to ask 8ball?',
                             type: 'string',
-                            validate: text => {
-                                if (text.length > 2) return true;
-                                return 'Please insert a question to ask 8ball.';
-                            }
+                            default: ''
                         }
                     ]
                 });
         }
         async run(message, {text})
         {
+            if (text.length < 3)
+                return message.reply("Please ask a valid question!");
             var answer = ["I'm not quite certain",
                           "Better not tell you now...",
                           "You may rely on it",
