@@ -8,3 +8,4 @@
 +Only "Admin" group command will ask for a valid input of user/text
 +Added command group "Owner"
 +Added the command "botname" under the group "Owner"
++Fixed the bug where the bot crashed when requested it's own profile
