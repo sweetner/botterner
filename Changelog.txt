@@ -1,4 +1,4 @@
-**V1.1**
+**V2.1**
 +Added changelog and changelog command
 +Added invite link command
 +Changed the bot status to "s!help ; <amount of server> servers"
