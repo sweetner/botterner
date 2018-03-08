@@ -25,7 +25,7 @@ class AvatarCommand extends commando.Command
         {
             if(user)
                 return message.say(`There you go! \n${user.avatarURL}`);
-            return message.say(`There you go! \n${message.author.avatarURL}`);
+            return message.say(`There you go! \n${message.author.displayAvatarURL}`);
         }
     }   
 

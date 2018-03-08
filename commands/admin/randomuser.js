@@ -1,6 +1,7 @@
 
 
 const commando = require('discord.js-commando');
+
 class RandomUserCommand extends commando.Command
     {   
         constructor(client)

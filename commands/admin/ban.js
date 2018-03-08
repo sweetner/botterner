@@ -11,7 +11,7 @@ class BanCommand extends commando.Command
                     group: 'admin',
                     memberName: 'ban',
                     description: 'Bans a user.',
-                    examples: ['s!ban `@mention`', 's!ban `@mention` `reason`'],
+                    examples: ['s!ban `@mention`','s!ban `@mention` `reason`'],
                     guildOnly: true,
                     args: [
                         {

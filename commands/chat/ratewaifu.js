@@ -1,6 +1,7 @@
 
 
 const commando = require('discord.js-commando');
+
 class RateWaifuCommand extends commando.Command
     {   
         constructor(client)

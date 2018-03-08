@@ -10,7 +10,7 @@ class EightBallCommand extends commando.Command
                     group: 'random',
                     memberName: '8ball',
                     description: 'Ask 8ball a question, and it will answer it with great powers.',
-                    examples: ['s!8ball Will I pass my next driving test?','s!8ball will I find the love of my life by next week?'],
+                    examples: ['s!8ball Will I pass my next driving test?', 's!8ball will I find the love of my life by next week?'],
                     args: [
                         {
                             key: 'text',

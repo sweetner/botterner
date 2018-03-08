@@ -1,6 +1,7 @@
 
 
 const commando = require('discord.js-commando');
+
 class KillChatCommand extends commando.Command
     {   
         constructor(client)
