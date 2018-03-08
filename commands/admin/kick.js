@@ -41,7 +41,7 @@ class KickCommand extends commando.Command
             if (!(message.guild.member(message.author).hasPermission("KICK_MEMBERS") || this.client.isOwner(message.author)))
                 return;
             message.guild.member(user).kick();
-            console.log(`${message.author} kicked ${user}`)
+            console.log(`${message.author.tag} kicked ${user.tag}`);
             return;
         }
     }   
