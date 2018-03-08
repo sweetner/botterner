@@ -21,6 +21,8 @@ class ProfileCommand extends commando.Command
         async run(message)
         {
             let user = message.mentions.users.first() ? message.mentions.users.first() : message.author;
+            if (user = this.client.user)
+                return message.reply(`Sorry I cant show my own profile!`);
             let nickname = message.guild.member(user).nickname ? message.guild.member(user).nickname : "No nickname";
             let role = message.guild.member(user).highestRole ? message.guild.member(user).highestRole : "No role";
             let lastmsg = message.guild.member(user).lastMessage ? message.guild.member(user).lastMessage : `${user.tag} sent no messages lately`;
