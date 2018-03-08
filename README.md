@@ -1,11 +1,13 @@
 ﻿# botterner-updated 
-﻿## USEFUL LINKS
+ 
+ 
+﻿# USEFUL LINKS
  
 [Invite link to add the bot to your server!](https://discordapp.com/oauth2/authorize?client_id=383333774869397504&permissions=ADMINISTRATOR&scope=bot)
 
 [Click here to join the bot development server for suggestions and feedback!](https://discord.gg/SWKv4zD)
 
-﻿## ABOUT ME & THE BOT
+﻿# ABOUT ME & THE BOT
  
 I go by the name of Weedner/Sweet and I'm currently 18 years old.
 
