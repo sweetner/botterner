@@ -22,7 +22,7 @@ client.registry
 
 client.on('ready', () => {
     console.log('Logged in!');
-    client.user.setGame('s!help for help!');
+    client.user.setGame(`s!help ; ${client.guilds.size} servers`);
 });
 
 client.login(process.env.BOT_TOKEN);
