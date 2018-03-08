@@ -1,0 +1,4 @@
+**V1.0**
+
++Added changelog
++Added invite link command
