@@ -6,3 +6,5 @@
 +Added a special interaction when a user s!love him/herself
 +Changed the avatar command to look better
 +Only "Admin" group command will ask for a valid input of user/text
++Added command group "Owner"
++Added the command "botname" under the group "Owner"
