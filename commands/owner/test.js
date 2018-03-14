@@ -26,10 +26,8 @@ class TestCommand extends commando.Command
 
         async run(message)
         {
-            let user = message.mentions.users.first();
-            if(user)
-                return message.say(user + " :point_left: :gun:");
-            return message.say(`CHAT :point_left: :gun:`);
+            message.say(`test`);
+            return;
         }
     }   
 

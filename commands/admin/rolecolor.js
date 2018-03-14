@@ -43,8 +43,13 @@ class RoleColorCommand extends commando.Command
 
         async run(message, {role, color} )
         {
-            role.setColor(color);
-            message.say(`The color for the role${role}, has been changed to ${color}`);
+            role.setColor(color)
+                .then(rolelog => {
+                    message.say(`The color for the role${role}, has been changed to ${color}`);
+                })
+                .catch(err => {
+                    message.reply(err.message);
+                });
             return;
         }
     }   

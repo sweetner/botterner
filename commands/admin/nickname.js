@@ -46,7 +46,10 @@ class NickNameCommand extends commando.Command
         {
             if (!(message.guild.member(message.author).hasPermission("MANAGE_NICKNAMES") || this.client.isOwner(message.author)))
                 return;
-            message.guild.member(user).setNickname(text);
+            message.guild.member(user).setNickname(text)
+                .catch(err => {
+                    message.reply(err.message);
+                });
             return;
         }
     }   

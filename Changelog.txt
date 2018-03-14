@@ -1,3 +1,14 @@
+**V2.2**
++Fixed a bug in the "profile" command, in which the command wouldn't work.
++Added a unique interaction when trying to ban the bot owner(s).
++Added a new api support for "League of legends" as well as a new command group "League of legends".
++Added the command "leagueprofile" under "League of legends".
++Added the command "leaguefreeweek" under "League of legends".
++Added the command "leaguelivegame" under "League of legends".
++Added a reply when the bot cant ban/kick/etc.. because of low privilege or any other error.
+
+
+
 **V2.1**
 +Added changelog and changelog command
 +Added invite link command

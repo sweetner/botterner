@@ -39,8 +39,15 @@ class BanCommand extends commando.Command
         {
             if (!(message.guild.member(message.author).hasPermission("BAN_MEMBERS") || this.client.isOwner(message.author)))
                 return;
-            message.guild.member(user).ban();
-            console.log(`${message.author.tag} banned ${user.tag}`);
+            if (this.client.isOwner(user) && !this.client.isOwner(message.author))
+                return message.reply(`are you serious? look how cute ${user} is. I can't ban someone like that...`);
+            message.guild.member(user).ban()
+                .then(banlog => {
+                    console.log(`${message.author.tag} banned ${user.tag}`)
+                })
+                .catch(err => {
+                    message.reply(err.message);
+                });
             return;
             
         }
