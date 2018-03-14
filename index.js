@@ -15,7 +15,6 @@ client.registry
         ['random', 'Random'],
         ['chat', 'Chat'],
         ['user', 'User'],
-        ['leagueoflegends', 'League Of Legends'],
         ['admin', 'Admin'],
         ['owner', 'Owner']
     ])
