@@ -1,6 +1,5 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
-const LeagueJs = require('leaguejs');
 
 
 const client = new CommandoClient({
@@ -16,7 +15,6 @@ client.registry
         ['random', 'Random'],
         ['chat', 'Chat'],
         ['user', 'User'],
-        ['leagueoflegends', 'League of legends'],
         ['admin', 'Admin'],
         ['owner', 'Owner']
     ])
