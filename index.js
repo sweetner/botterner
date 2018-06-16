@@ -16,7 +16,8 @@ client.registry
         ['chat', 'Chat'],
         ['user', 'User'],
         ['admin', 'Admin'],
-        ['owner', 'Owner']
+        ['owner', 'Owner'],
+        ['leagueoflegends', 'League Of Legends']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
