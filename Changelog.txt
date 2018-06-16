@@ -1,3 +1,4 @@
+test test
 **V2.2**
 +Fixed a bug in the "profile" command, in which the command wouldn't work.
 +Added a unique interaction when trying to ban the bot owner(s).
