@@ -99,7 +99,7 @@ class LeagueLiveGameCommand extends commando.Command {
                                     default: gameType = 'Unknown'; break;
                                 };
                                 var embed = new Discord.RichEmbed()
-                                    .setTitle(`Live game of ${sum.name} || Game length - ${Math.floor(spect.gameLength / 60)}:${spect.gameLength % 60 < 10 ? '0'+(spect.gameLength % 60) : spect.gameLength % 60}`)
+                                    .setTitle(`Live game of ${sum.name} || Game length : ${Math.floor(spect.gameLength / 60) > 0 ? Math.floor(spect.gameLength / 60) : 0}:${spect.gameLength % 60 < 10 ? '0'+(spect.gameLength % 60 > 0 ? spect.gameLength % 60 : 0) : spect.gameLength % 60}`)
                                     .setThumbnail(`http://ddragon.leagueoflegends.com/cdn/8.8.2/img/profileicon/${sum.profileIconId}.png`)
                                     .addField("Game mode", `${gameType}`, false)
                                     .addField("Blue Team", blueTeamData.players, true)

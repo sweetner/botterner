@@ -2,7 +2,7 @@ const commando = require('discord.js-commando');
 const Discord = require('discord.js');
 
 const LeagueJs = require('leaguejs');
-const api = new LeagueJs(process.env.RIOT_API);
+const api = new LeagueJs(process.env.RIOT_API); 
 
 
 class LeagueFreeWeekCommand extends commando.Command {

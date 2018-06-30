@@ -1,13 +1,14 @@
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
 
-
-const client = new CommandoClient({
+client = new CommandoClient({
     commandPrefix: 's!',
     unknownCommandResponse: false,
-    owner: ['109378124898136064','290154978742632449'],
+    owner: ['109378124898136064','290154978742632449', '326435931286405122'],
     disableEveryone: true
 });
+
+client.login(process.env.BOT_TOKEN); 
 
 client.registry
     .registerDefaultTypes()
@@ -23,9 +24,13 @@ client.registry
     .registerDefaultCommands()
     .registerCommandsIn(path.join(__dirname, 'commands'));
 
+require('./events/wolframalpha.js');
+
 client.on('ready', () => {
     console.log('Logged in!');
-    client.user.setGame(`s!help ; ${client.guilds.size} servers`);
+    client.user.setGame(`${client.commandPrefix}help ; ${client.guilds.size} servers`);
 });
 
-client.login(process.env.BOT_TOKEN);
+
+
+

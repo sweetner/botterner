@@ -12,6 +12,7 @@
     "current-time": "^1.0.1",
     "discord.js": "^11.2.1",
     "discord.js-commando": "^0.9.0",
+    "get-json": "^1.0.0",
     "leaguejs": "^1.9.0",
     "request": "^2.87.0"
   }
