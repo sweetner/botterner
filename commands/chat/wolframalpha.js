@@ -15,7 +15,7 @@ class WolframCommand extends commando.Command
                     aliases: ['wa'],
                     group: 'chat',
                     memberName: 'wolframalpha',
-                    description: 'Ask wolfram alpha anything!',
+                    description: 'Ask wolfram alpha anything! (You can also use s!wa)',
                     examples: [`s!wa green's theorem`, `s!wolframalpha green's theorem`],
                     args: [
                         {
