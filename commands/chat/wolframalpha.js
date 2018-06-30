@@ -11,11 +11,12 @@ class WolframCommand extends commando.Command
         {
             super(client,
                 {
-                    name: 'wa',
+                    name: 'wolframalpha',
+                    aliases: ['wa'],
                     group: 'chat',
-                    memberName: 'wa',
+                    memberName: 'wolframalpha',
                     description: 'Ask wolfram alpha anything!',
-                    examples: ['this command changes often.'],
+                    examples: [`s!wa green's theorem`, `s!wolframalpha green's theorem`],
                     args: [
                         {
                             key: 'text',
