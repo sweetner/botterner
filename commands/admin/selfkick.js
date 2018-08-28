@@ -34,8 +34,6 @@ class SelfKickCommand extends commando.Command
 
         async run(message, {text} )
         {
-            if (!(message.guild.member(message.author).hasPermission("KICK_MEMBERS") || this.client.isOwner(message.author)))
-                return;
             message.guild.leave();
             return;
         }
