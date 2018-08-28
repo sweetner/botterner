@@ -2,7 +2,7 @@
 
 const commando = require('discord.js-commando');
 const Discord = require('discord.js');
-const wolframId = process.env.WOLFRAM_API;
+const wolframId = process.env.WOLFRAM_API; //process.env.WOLFRAM_API
 const getJSON = require('get-json');
 
 class WolframCommand extends commando.Command
@@ -45,6 +45,7 @@ class WolframCommand extends commando.Command
 
             getJSON(url, async function(error, response){
                 response.vIndex = 0;
+                console.log(response.queryresult);
                 if(!response.queryresult.success)
                     return message.reply(`Oops... Couldn't understand you.`)
                 var image = response.queryresult.pods[0].subpods[0].img.src;
@@ -54,7 +55,7 @@ class WolframCommand extends commando.Command
                     .setColor(0x00FFFF)
                     .setFooter('Tip: You can use the arrow reaction multiple times!')
                 botMsg.edit(embed);
-
+                response.user = message.author;
                 botMsg.customWolfram = response;
 
                 await botMsg.react(back);

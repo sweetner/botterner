@@ -32,7 +32,7 @@ class KickCommand extends commando.Command
 
         hasPermission(message) {
             if(message.guild) 
-                return (this.client.isOwner(message.author) || message.member.hasPermission('KICK_MEMBERS'));
+                return (message.member.hasPermission('KICK_MEMBERS'));
         }
 
 

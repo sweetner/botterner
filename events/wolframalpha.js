@@ -7,6 +7,7 @@ var reactionTask = function(messageReaction, user) {
     let response = message.customWolfram;
 
     if (!response) return;
+    if (user.id != response.user.id) return;
 
     switch (messageReaction._emoji.name) {
         case '▶':

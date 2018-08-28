@@ -13,6 +13,7 @@ class ProfileCommand extends commando.Command
                     group: 'user',
                     memberName: 'profile',
                     description: 'Shows a profile of a user',
+                    guildOnly: true,
                     examples: ['s!profile `@mention`'],
                 });
         }

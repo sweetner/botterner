@@ -31,7 +31,7 @@ class BanCommand extends commando.Command
 
         hasPermission(message) {
             if(message.guild) 
-                return (this.client.isOwner(message.author) || message.member.hasPermission('BAN_MEMBERS'));
+                return (message.member.hasPermission('BAN_MEMBERS'));
         }
 
 
