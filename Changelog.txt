@@ -3,8 +3,9 @@
 
 
 **V2.3**
-+Fixed some minor bugs
-+Added wolfram alpha command with reaction navigation
++Fixed some minor bugs.
++Added wolfram alpha command with reaction navigation.
++Spiced up the error meessage and added some quality of life changes.
 
 **V2.2**
 +Fixed a bug in the "profile" command, in which the command wouldn't work.
