@@ -1,6 +1,6 @@
 **V2.4**
 +Fixed an error when trying to use `profile` in direct messages.
-
++Removed league of legends command due to lots of bugs.
 
 **V2.3**
 +Fixed some minor bugs.
